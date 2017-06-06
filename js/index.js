@@ -1,3 +1,10 @@
+var MongoClient = require('mongodb').MongoClient
+var Server = require('mongodb').Server;
+
+var mongoclient = new MongoClient(new Server('localhost',27017,{'native_parser':true}));
+var db = mongoclient.db('testmongo');
+
+
 
 var http = require('http');
 var fs = require('fs');
